@@ -4,6 +4,7 @@ import { TodoContext } from "../TodoContext";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
+import { TodoForm } from "../TodoForm";
 import { TodoButton } from "../TodoButton";
 import { Modal } from "../Modal";
 
@@ -40,12 +41,11 @@ function AppUI() {
 
         {!!openModal && (
             <Modal>
-                <p>Teletransportación</p>
+                <TodoForm/>
             </Modal>
         )}
         <TodoButton 
             setOpenModal={setOpenModal}
-            openModal = {openModal}
         />
     </React.Fragment>
     );
